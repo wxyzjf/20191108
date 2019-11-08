@@ -1,0 +1,49 @@
+mig_biz_summ
+
+adw etl document
+
+kevin trace
+sa workly
+
+ cat test.csv|hexdump -C
+awk -F"," '{print NF}' test.csv|hexdump -C
+
+ awk -F"," '{print NF}' test.csv
+ awk -F"," '{print NF}' test.csv|hexdump -C
+
+
+cat test.csv |hexdump -C
+
+echo ","|hexdump -C
+
+ dos2unix test.csv
+
+
+ls -rlht
+
+mv test.csv.back test.csv
+
+ awk -F',' '{print $2}' test.csv 
+
+
+cat test.csv |hexdump -C
+ echo "." |hexdump -C
+
+ echo "abc"|hexdump -C
+ echo "." |hexdump -C
+
+
+coalesce(TRX_MONTH,trunc(TO_DATE('${etlvar::TXDATE}', 'YYYY-MM-DD')-1,'MONTH')) 
+select trunc(add_months(SYSDATE,-1),'mm') from dual
+
+
+/opt/etl/filein/tmp/BirdieGame/getfile/GamerResearchCenterRecord> awk -F',' '{print NF}' TOTAL_GamerResearchCenterRecord.csv|sort|uniq
+1
+11
+12
+13
+14
+18
+19
+/opt/etl/filein/tmp/BirdieGame/getfile/GamerResearchCenterRecord> ^Ck -F',' '{print NF}' TOTAL_GamerResearchCenterRecord.csv|sort|uniq
+/opt/etl/filein/tmp/BirdieGame/getfile/GamerResearchCenterRecord> awk -F',' '{if (NF==13) print $0}' abnormal.csv|head -   

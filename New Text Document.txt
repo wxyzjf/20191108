@@ -1,0 +1,64 @@
+/opt/etl/filein/tmp/BirdieGame/getfile/data/data
+
+
+
+
+TOTAL_GamerIAPRecord.csv
+TOTAL_GamerInGameTransactionRecord.csv
+TOTAL_GamerLoginRecord.csv
+TOTAL_GamerMiniGameRecord.csv
+TOTAL_GamerResearchCenterRecord.csv
+
+
+
+
+
+
+
+
+
+
+
+
+
+alter table MIG_ADW.D_BIRDIE_INGAME_TRANS_DTL modify delta_Quantity NUMBER(8)  DEFAULT 0;
+alter table MIG_ADW.B_BIRDIE_INGAME_TRANS_DTL_001 modify delta_Quantity NUMBER(8)  DEFAULT 0;
+alter table MIG_ADW.BIRDIE_INGAME_TRANS_DTL modify delta_Quantity NUMBER(8)  DEFAULT 0;
+
+
+ResearchCenterRecord
+LoginRecord(email) and ftp num
+
+
+
+
+
+
+
+ ls -rlht
+
+
+awk -F"," '{print $0}' TOTAL_GamerLoginRecord.csv|head
+awk -F"," '{print $1"|"$2}' TOTAL_GamerLoginRecord.csv|head
+awk -F"," '{if substr($1,1,1)="""}' TOTAL_GamerLoginRecord.csv|head
+
+
+
+
+
+
+
+echo "here is a string" | awk '
+{ 
+  split($0, chars, "")
+  for (i=1; i <= length($0); i++) {
+    printf("%s\n", chars[i])
+  }
+}'
+
+
+Another idea is to break the string into char and judge it one by one.
+
+
+
+
